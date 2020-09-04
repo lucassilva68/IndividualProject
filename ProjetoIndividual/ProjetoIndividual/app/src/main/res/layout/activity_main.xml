@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saiba a renda de sua família e qual sua situação"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/txt_primeiro_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Qual é o seu nome?"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:translationX="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_topo"
+
+        />
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome"
+        android:translationX="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_primeiro_info"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_error_primeiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por favor, digite seu nome"
+        android:textColor="#FF0000"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+
+    <TextView
+        android:id="@+id/txt_error_segundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por favor, digite um número válido"
+        android:textColor="#FF0000"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_2" />
+
+    <TextView
+        android:id="@+id/txt_error_terceiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por favor, digite um saldo válido"
+        android:textColor="#FF0000"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_3" />
+
+
+    <TextView
+        android:id="@+id/txt_segundo_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Quantas pessoas há na sua família?"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        />
+
+    <EditText
+        android:id="@+id/et_nome_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite a resposta"
+        android:inputType="number"
+
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txt_segundo_info" />
+
+
+    <TextView
+        android:id="@+id/txt_terceiro_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Qual a renda total da sua família por mês"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_2" />
+
+    <EditText
+        android:id="@+id/et_nome_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite a resposta"
+        android:inputType="numberDecimal"
+        android:translationX="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txt_terceiro_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_resposta"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/et_nome_3"
+        android:layout_marginTop="100dp"
+        android:translationX="9dp"
+        />
+
+
+    <Button
+        android:id="@+id/btn_prox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#6970AA"
+        android:onClick="clicarProximo"
+        android:text="Próximo"
+        android:translationX="150dp"
+        android:translationY="160dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#6970AA"
+        android:onClick="calcularRenda"
+        android:text="Calcular"
+        android:translationX="150dp"
+        android:translationY="150dp"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/txt_topo"
+        android:layout_marginLeft="20dp"
+        android:text="Resetar"
+        android:id="@+id/btn_reset"
+        android:onClick="resetCampos"
+        android:background="#9E3A3A"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
