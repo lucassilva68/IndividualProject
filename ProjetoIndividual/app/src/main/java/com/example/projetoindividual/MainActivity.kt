@@ -76,7 +76,9 @@ class MainActivity : AppCompatActivity() {
                 } else{
                     txt_resposta.setTextColor(Color.GREEN)
                 }
-                txt_resposta.text = "Olá, $nomeUsuario, sua casa possui uma renda familiar de R$${String.format("%.2f", resultado)}. "+
+                txt_resposta.text = "Olá, $nomeUsuario, em sua casa, com $quantidadePessoas e uma " +
+                        "renda total de R$ $salarioFamilia, " +
+                        "possui uma renda familiar de R$${String.format("%.2f", resultado)}. "+
                         "Ou seja, sua família está ${
                         if (resultado < 1558.5){
                             "abaixo de 1 salario mínimo e meio"
